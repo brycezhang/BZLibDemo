@@ -21,18 +21,19 @@ Pod::Spec.new do |s|
   # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
   s.license          = 'MIT'
   s.author           = { "brycezhang" => "brycezhang.cn@gmail.com" }
-  s.source           = { :git => "https://github.com/<GITHUB_USERNAME>/BZLib.git", :tag => s.version.to_s }
+  s.source           = { :git => "~/workspace/bryce/projcets/BZLib", :tag => '0.1.0' }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.platform     = :ios, '7.0'
+  s.platform     = :ios, '6.0'
   s.requires_arc = true
 
-  s.source_files = 'Pod/Classes'
+  s.source_files = 'Pod/Classes/**/*.{h,m}'
   s.resource_bundles = {
     'BZLib' => ['Pod/Assets/*.png']
   }
 
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  s.public_header_files = 'Pod/Classes/**/*.h'
+  s.frameworks = 'MobileCoreServices', 'CFNetwork', 'CoreGraphics'
+  s.libraries  = 'z.1'
+  s.dependency 'YSASIHTTPRequest', '~> 2.0.1'
 end

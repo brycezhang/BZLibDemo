@@ -7,9 +7,12 @@
 //
 
 #import "BZViewController.h"
+#import <BZLib/BZHttphelper.h>
 
 @interface BZViewController ()
-
+{
+    BZHttphelper *_httpHelper;
+}
 @end
 
 @implementation BZViewController
@@ -17,7 +20,12 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    _httpHelper = [BZHttphelper new];
+    [_httpHelper getWithUrl:@"http://wcf.open.cnblogs.com/blog/u/brycezhang/posts/1/5" withCompletion:^(id responseObject) {
+         NSLog(@"[Completion]:%@", responseObject);
+     } failed:^(NSError *error) {
+         NSLog(@"[Failed]:%@", error);
+     }];
 }
 
 - (void)didReceiveMemoryWarning

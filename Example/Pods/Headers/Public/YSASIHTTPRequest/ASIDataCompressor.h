@@ -1,0 +1,1 @@
+../../../YSASIHTTPRequest/Classes/ASIDataCompressor.h

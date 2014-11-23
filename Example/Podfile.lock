@@ -1,0 +1,25 @@
+PODS:
+  - BZLib (0.1.0):
+    - YSASIHTTPRequest (~> 2.0.1)
+  - Kiwi (2.3.1)
+  - Reachability (3.2)
+  - YSASIHTTPRequest (2.0.1):
+    - YSASIHTTPRequest/Core
+  - YSASIHTTPRequest/Core (2.0.1):
+    - Reachability
+
+DEPENDENCIES:
+  - BZLib (from `../`)
+  - Kiwi
+
+EXTERNAL SOURCES:
+  BZLib:
+    :path: ../
+
+SPEC CHECKSUMS:
+  BZLib: 3156bfc77b73dded4bd7646e805b8ac44254f3a8
+  Kiwi: 73e1400209055ee9c8ba78c6012b6b642d0fb9f7
+  Reachability: 1ef8adf5c4e3d362f96515d4278f68dad3c26930
+  YSASIHTTPRequest: 955e68bf54457506cd5e7e47d9eeb42dfd530f0f
+
+COCOAPODS: 0.34.4
